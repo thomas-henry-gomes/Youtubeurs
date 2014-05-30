@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Scrollbar Default Delay Before Fade -->
+    <integer name="DefaultDelayBeforeFade">100</integer>
+
+</resources>

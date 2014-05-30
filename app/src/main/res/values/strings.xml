@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Youtubeurs</string>
+    <string name="dummy_content"></string>
+    <string name="Jouer">Jouer</string>
+    <string name="Options">Paramètres</string>
+    <string name="title_activity_main">Youtubeurs</string>
+    <string name="title_activity_videos">Vidéos</string>
+    <string name="title_activity_launch">Youtubeurs</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_response">Saisie</string>
+    <string name="title_activity_settings">Paramètres</string>
+    <string name="initData">Réinitialiser l\'application</string>
+    
+    <string name="error_player">Erreur en initialisant le player YouTube (%1$s)</string>
+
+</resources>

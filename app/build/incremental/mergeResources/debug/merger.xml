@@ -1,0 +1,958 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger>
+
+    <dataSet config="0.4.0" >
+        <source path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/exploded-aar/com.github.castorflex.smoothprogressbar/library/0.4.0/res" >
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/exploded-aar/com.github.castorflex.smoothprogressbar/library/0.4.0/res/values/values.xml"
+                qualifiers="" >
+                <integer name="spb_default_interpolator" >
+0
+                </integer>
+
+                <bool name="spb_default_mirror_mode" >
+false
+                </bool>
+
+                <color name="spb_default_color" >#33b5e5
+                </color>
+
+                <style
+                    name="Theme.SmoothProgressBarDefaults"
+                    parent="android:Theme" >
+                    <item name="spbStyle">
+@style/SmoothProgressBar
+                    </item>
+                </style>
+
+                <bool name="spb_default_reversed" >
+false
+                </bool>
+
+                <dimen name="spb_default_stroke_separator_length" >4dp
+                </dimen>
+
+                <integer name="spb_default_sections_count" >
+4
+                </integer>
+
+                <bool name="spb_default_progressiveStart_activated" >
+false
+                </bool>
+
+                <item
+                    name="spb_default_speed"
+                    format="float"
+                    type="string">
+1.0
+                </item>
+
+                <dimen name="spb_default_stroke_width" >4dp
+                </dimen>
+
+                <style
+                    name="SmoothProgressBar"
+                    parent="android:Widget.ProgressBar.Horizontal" >
+                    <item name="spb_color">
+@color/spb_default_color
+                    </item>
+                    <item name="spb_sections_count">
+@integer/spb_default_sections_count
+                    </item>
+                    <item name="spb_speed">
+@string/spb_default_speed
+                    </item>
+                    <item name="spb_stroke_width">
+@dimen/spb_default_stroke_width
+                    </item>
+                    <item name="spb_stroke_separator_length">
+@dimen/spb_default_stroke_separator_length
+                    </item>
+                    <item name="spb_reversed">
+@bool/spb_default_reversed
+                    </item>
+                    <item name="spb_mirror_mode">
+@bool/spb_default_mirror_mode
+                    </item>
+                    <item name="spb_progressiveStart_activated">
+@bool/spb_default_progressiveStart_activated
+                    </item>
+                    <item name="spb_background">
+@null
+                    </item>
+                    <item name="spb_generate_background_with_colors">
+false
+                    </item>
+                </style>
+
+                <declare-styleable name="SmoothProgressBar" >
+                    <attr
+                        name="spbStyle"
+                        format="reference" />
+                    <attr
+                        name="spb_color"
+                        format="color" />
+                    <attr
+                        name="spb_stroke_width"
+                        format="dimension" />
+                    <attr
+                        name="spb_stroke_separator_length"
+                        format="dimension" />
+                    <attr
+                        name="spb_sections_count"
+                        format="integer" />
+                    <attr
+                        name="spb_speed"
+                        format="float" />
+                    <attr
+                        name="spb_progressiveStart_speed"
+                        format="float" />
+                    <attr
+                        name="spb_progressiveStop_speed"
+                        format="float" />
+                    <attr
+                        name="spb_interpolator"
+                        format="enum" >
+                        <enum
+                            name="spb_interpolator_accelerate"
+                            value="0" />
+                        <enum
+                            name="spb_interpolator_linear"
+                            value="1" />
+                        <enum
+                            name="spb_interpolator_acceleratedecelerate"
+                            value="2" />
+                        <enum
+                            name="spb_interpolator_decelerate"
+                            value="3" />
+                    </attr>
+                    <attr
+                        name="spb_reversed"
+                        format="boolean" />
+                    <attr
+                        name="spb_mirror_mode"
+                        format="boolean" />
+                    <attr
+                        name="spb_colors"
+                        format="reference" />
+                    <attr
+                        name="spb_progressiveStart_activated"
+                        format="boolean" />
+                    <attr
+                        name="spb_background"
+                        format="reference" />
+                    <attr
+                        name="spb_generate_background_with_colors"
+                        format="boolean" />
+                </declare-styleable>
+            </file>
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/exploded-aar/com.github.castorflex.smoothprogressbar/library/0.4.0/res/values-v14/values.xml"
+                qualifiers="v14" >
+
+                <style
+                    name="SmoothProgressBar"
+                    parent="android:Widget.Holo.ProgressBar.Horizontal" >
+                    <item name="spb_color">
+@color/spb_default_color
+                    </item>
+                    <item name="spb_sections_count">
+@integer/spb_default_sections_count
+                    </item>
+                    <item name="spb_speed">
+@string/spb_default_speed
+                    </item>
+                    <item name="spb_stroke_width">
+@dimen/spb_default_stroke_width
+                    </item>
+                    <item name="spb_stroke_separator_length">
+@dimen/spb_default_stroke_separator_length
+                    </item>
+                    <item name="spb_reversed">
+@bool/spb_default_reversed
+                    </item>
+                    <item name="spb_mirror_mode">
+@bool/spb_default_mirror_mode
+                    </item>
+                </style>
+            </file>
+        </source>
+    </dataSet>
+    <dataSet config="0.9.9" >
+        <source path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.9/res" >
+            <file
+                name="default_header"
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.9/res/layout/default_header.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.9/res/values/values.xml"
+                qualifiers="" >
+                <item
+                    name="ptr_text"
+                    type="id"/>
+
+                <declare-styleable name="PullToRefreshHeader" >
+
+                    <!-- A drawable to use as the background of the Header View -->
+                    <attr
+                        name="ptrHeaderBackground"
+                        format="reference|color" />
+
+                    <!-- The height of the Header View -->
+                    <attr
+                        name="ptrHeaderHeight"
+                        format="reference|dimension" />
+
+                    <!-- The Text Appearance of the Header View's Title text -->
+                    <attr
+                        name="ptrHeaderTitleTextAppearance"
+                        format="reference" />
+
+                    <!-- The color that the Progress Bar should be tinted with -->
+                    <attr
+                        name="ptrProgressBarColor"
+                        format="reference|color" />
+
+                    <!-- The style of the Progress Bar -->
+                    <attr name="ptrProgressBarStyle" >
+                        <flag
+                            name="inside"
+                            value="0x0" />
+                        <flag
+                            name="outside"
+                            value="0x1" />
+                    </attr>
+
+                    <!-- The height of the Progress Bar -->
+                    <attr
+                        name="ptrProgressBarHeight"
+                        format="reference|dimension" />
+
+                    <!-- Text to show to prompt the user is pull (or keep pulling) -->
+                    <attr
+                        name="ptrPullText"
+                        format="reference|string" />
+
+                    <!-- Text to show to tell the user that a refresh is currently in progress -->
+                    <attr
+                        name="ptrRefreshingText"
+                        format="reference|string" />
+
+                    <!-- Text to show to tell the user has scrolled enough to refresh -->
+                    <attr
+                        name="ptrReleaseText"
+                        format="reference|string" />
+
+                    <!-- indeterminate progressbar style -->
+                    <attr
+                        name="ptrSmoothProgressBarStyle"
+                        format="reference" />
+                </declare-styleable>
+
+                <string name="pull_to_refresh_pull_label" >Pull to refresh…
+                </string>
+
+                <item
+                    name="ptr_progress"
+                    type="id"/>
+
+                <string name="pull_to_refresh_release_label" >Release to refresh…
+                </string>
+
+                <declare-styleable name="PullToRefreshView" >
+
+                    <!-- The class to use as a View's View Delegate. Can be relative path from app's package name -->
+                    <attr
+                        name="ptrViewDelegateClass"
+                        format="reference|string" />
+                </declare-styleable>
+
+                <color name="default_progress_bar_color" >#FF33B5E5
+                </color>
+
+                <string name="pull_to_refresh_refreshing_label" >Loading…
+                </string>
+
+                <item
+                    name="ptr_content"
+                    type="id"/>
+
+                <dimen name="ptr_progress_bar_stroke_width" >4dp
+                </dimen>
+
+                <attr
+                    name="ptrHeaderStyle"
+                    format="reference" />
+            </file>
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.9/res/values-ar/values.xml"
+                qualifiers="ar" >
+                <string name="pull_to_refresh_release_label" >اترك للتحديث…
+                </string>
+                <string name="pull_to_refresh_pull_label" >اسحب للتحديث…
+                </string>
+                <string name="pull_to_refresh_refreshing_label" >تحميل…
+                </string>
+            </file>
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.9/res/values-cs/values.xml"
+                qualifiers="cs" >
+                <string name="pull_to_refresh_refreshing_label" >Načítání…
+                </string>
+                <string name="pull_to_refresh_release_label" >Uvolněním aktualizujete…
+                </string>
+                <string name="pull_to_refresh_pull_label" >Tažením aktualizujete…
+                </string>
+            </file>
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.9/res/values-de/values.xml"
+                qualifiers="de" >
+                <string name="pull_to_refresh_pull_label" >Ziehen zum Aktualisieren…
+                </string>
+                <string name="pull_to_refresh_refreshing_label" >Laden…
+                </string>
+                <string name="pull_to_refresh_release_label" >Loslassen zum Aktualisieren…
+                </string>
+            </file>
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.9/res/values-el/values.xml"
+                qualifiers="el" >
+                <string name="pull_to_refresh_release_label" >Αφήστε για ανανέωση…
+                </string>
+                <string name="pull_to_refresh_refreshing_label" >Φόρτωση…
+                </string>
+                <string name="pull_to_refresh_pull_label" >Σύρετε προς τα κάτω για ανανέωση…
+                </string>
+            </file>
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.9/res/values-es/values.xml"
+                qualifiers="es" >
+                <string name="pull_to_refresh_pull_label" >Desliza el dedo hacia abajo para actualizar.
+                </string>
+                <string name="pull_to_refresh_refreshing_label" >Cargando…
+                </string>
+                <string name="pull_to_refresh_release_label" >Soltar para actualizar…
+                </string>
+            </file>
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.9/res/values-fi/values.xml"
+                qualifiers="fi" >
+                <string name="pull_to_refresh_refreshing_label" >Päivitetään…
+                </string>
+                <string name="pull_to_refresh_pull_label" >Päivitä vetämällä alas…
+                </string>
+                <string name="pull_to_refresh_release_label" >Päivitä vapauttamalla…
+                </string>
+            </file>
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.9/res/values-fr/values.xml"
+                qualifiers="fr" >
+                <string name="pull_to_refresh_pull_label" >Tirez pour rafraîchir…
+                </string>
+                <string name="pull_to_refresh_release_label" >Relâcher pour rafraîchir…
+                </string>
+                <string name="pull_to_refresh_refreshing_label" >Chargement…
+                </string>
+            </file>
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.9/res/values-he/values.xml"
+                qualifiers="he" >
+                <string name="pull_to_refresh_release_label" >שחרר לרענון…
+                </string>
+                <string name="pull_to_refresh_pull_label" >משוך לרענון…
+                </string>
+                <string name="pull_to_refresh_refreshing_label" >טוען…
+                </string>
+            </file>
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.9/res/values-it/values.xml"
+                qualifiers="it" >
+                <string name="pull_to_refresh_refreshing_label" >Caricamento…
+                </string>
+                <string name="pull_to_refresh_release_label" >Rilascia per aggionare…
+                </string>
+                <string name="pull_to_refresh_pull_label" >Tira per aggiornare…
+                </string>
+            </file>
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.9/res/values-iw/values.xml"
+                qualifiers="iw" >
+                <string name="pull_to_refresh_pull_label" >משוך לרענון…
+                </string>
+                <string name="pull_to_refresh_refreshing_label" >טוען…
+                </string>
+                <string name="pull_to_refresh_release_label" >שחרר לרענון…
+                </string>
+            </file>
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.9/res/values-ja/values.xml"
+                qualifiers="ja" >
+                <string name="pull_to_refresh_pull_label" >画面を引っ張って…
+                </string>
+                <string name="pull_to_refresh_refreshing_label" >読み込み中…
+                </string>
+                <string name="pull_to_refresh_release_label" >指を離して更新…
+                </string>
+            </file>
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.9/res/values-ko/values.xml"
+                qualifiers="ko" >
+                <string name="pull_to_refresh_refreshing_label" >로드 중…
+                </string>
+                <string name="pull_to_refresh_release_label" >놓아서 새로 고침…
+                </string>
+                <string name="pull_to_refresh_pull_label" >당겨서 새로 고침…
+                </string>
+            </file>
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.9/res/values-lt/values.xml"
+                qualifiers="lt" >
+                <string name="pull_to_refresh_release_label" >Paleiskite, kad atnaujinti…
+                </string>
+                <string name="pull_to_refresh_refreshing_label" >Kraunama…
+                </string>
+                <string name="pull_to_refresh_pull_label" >Traukite, kad atnaujinti…
+                </string>
+            </file>
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.9/res/values-nl/values.xml"
+                qualifiers="nl" >
+                <string name="pull_to_refresh_release_label" >Loslaten om te vernieuwen…
+                </string>
+                <string name="pull_to_refresh_pull_label" >Sleep om te vernieuwen…
+                </string>
+                <string name="pull_to_refresh_refreshing_label" >Laden…
+                </string>
+            </file>
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.9/res/values-pl/values.xml"
+                qualifiers="pl" >
+                <string name="pull_to_refresh_refreshing_label" >Wczytywanie…
+                </string>
+                <string name="pull_to_refresh_pull_label" >Pociągnij, aby odświeżyć…
+                </string>
+                <string name="pull_to_refresh_release_label" >Puść, aby odświeżyć…
+                </string>
+            </file>
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.9/res/values-pt/values.xml"
+                qualifiers="pt" >
+                <string name="pull_to_refresh_refreshing_label" >A carregar…
+                </string>
+                <string name="pull_to_refresh_release_label" >Liberação para atualizar…
+                </string>
+                <string name="pull_to_refresh_pull_label" >Puxe para atualizar…
+                </string>
+            </file>
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.9/res/values-pt-rBR/values.xml"
+                qualifiers="pt-rBR" >
+                <string name="pull_to_refresh_release_label" >Libere para atualizar…
+                </string>
+                <string name="pull_to_refresh_refreshing_label" >Carregando…
+                </string>
+                <string name="pull_to_refresh_pull_label" >Puxe para atualizar…
+                </string>
+            </file>
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.9/res/values-ro/values.xml"
+                qualifiers="ro" >
+                <string name="pull_to_refresh_refreshing_label" >Încărcare…
+                </string>
+                <string name="pull_to_refresh_pull_label" >Trage pentru a reîmprospăta…
+                </string>
+                <string name="pull_to_refresh_release_label" >Eliberează pentru a reîmprospăta…
+                </string>
+            </file>
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.9/res/values-ru/values.xml"
+                qualifiers="ru" >
+                <string name="pull_to_refresh_release_label" >отпустите
+                </string>
+                <string name="pull_to_refresh_pull_label" >потяните
+                </string>
+                <string name="pull_to_refresh_refreshing_label" >обновление
+                </string>
+            </file>
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.9/res/values-sk/values.xml"
+                qualifiers="sk" >
+                <string name="pull_to_refresh_refreshing_label" >Načítavanie...
+                </string>
+                <string name="pull_to_refresh_pull_label" >Potiahnite pre načítanie...
+                </string>
+                <string name="pull_to_refresh_release_label" >Uvoľnite pre načítanie...
+                </string>
+            </file>
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.9/res/values-sv/values.xml"
+                qualifiers="sv" >
+                <string name="pull_to_refresh_release_label" >Släpp om du vill uppdatera
+                </string>
+                <string name="pull_to_refresh_pull_label" >Dra nedåt om du vill uppdatera
+                </string>
+                <string name="pull_to_refresh_refreshing_label" >Uppdaterar…
+                </string>
+            </file>
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.9/res/values-tr/values.xml"
+                qualifiers="tr" >
+                <string name="pull_to_refresh_release_label" >Yenilemek için bırakın…
+                </string>
+                <string name="pull_to_refresh_refreshing_label" >Yükleniyor…
+                </string>
+                <string name="pull_to_refresh_pull_label" >Yenilemek için kaydırın…
+                </string>
+            </file>
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.9/res/values-zh/values.xml"
+                qualifiers="zh" >
+                <string name="pull_to_refresh_release_label" >放开以刷新…
+                </string>
+                <string name="pull_to_refresh_refreshing_label" >正在载入…
+                </string>
+                <string name="pull_to_refresh_pull_label" >下拉刷新…
+                </string>
+            </file>
+        </source>
+    </dataSet>
+    <dataSet config="main" >
+        <source path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res" >
+            <file
+                name="fadein"
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/anim/fadein.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="fadeout"
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/anim/fadeout.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="app_background"
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/drawable/app_background.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="background_png"
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/drawable/background_png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="blue_shape"
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/drawable/blue_shape.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="green_shape"
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/drawable/green_shape.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="grey_shape"
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/drawable/grey_shape.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="ic_action_delete"
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/drawable/ic_action_delete.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="ic_action_refresh"
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/drawable/ic_action_refresh.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="ic_action_share"
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/drawable/ic_action_share.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="play_alt"
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/drawable/play_alt.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="red_shape"
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/drawable/red_shape.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="scrollbar"
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/drawable/scrollbar.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/drawable-hdpi/ic_launcher.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/drawable-mdpi/ic_launcher.png"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/drawable-xhdpi/ic_launcher.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/drawable-xxhdpi/ic_launcher.png"
+                qualifiers="xxhdpi"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/drawable-xxxhdpi/ic_launcher.png"
+                qualifiers="xxxhdpi"
+                type="drawable" />
+            <file
+                name="activity_launch"
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/layout/activity_launch.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_level"
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/layout/activity_level.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_main"
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/layout/activity_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_response"
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/layout/activity_response.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_settings"
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/layout/activity_settings.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="list_item_user"
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/layout/list_item_user.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="list_item_video"
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/layout/list_item_video.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="template_button"
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/layout/template_button.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="launch"
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/menu/launch.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="level"
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/menu/level.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="main"
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/menu/main.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="proverb"
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/menu/proverb.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="response"
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/menu/response.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="settings"
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/menu/settings.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="statistic"
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/menu/statistic.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/values/analytics.xml"
+                qualifiers="" >
+                <bool name="ga_autoActivityTracking" >
+true
+                </bool>
+
+                <string name="ga_trackingId" >UA-49895675-6
+                </string>
+
+                <integer name="ga_dispatchPeriod" >
+5
+                </integer>
+
+                <bool name="ga_reportUncaughtExceptions" >
+true
+                </bool>
+            </file>
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/values/arrays.xml"
+                qualifiers="" >
+                <string-array name="syncFrequencyValues" >
+                    <item name="30">
+30
+                    </item>
+                    <item name="60">
+60
+                    </item>
+                    <item name="120">
+120
+                    </item>
+                    <item name="180">
+180
+                    </item>
+                    <item name="360">
+360
+                    </item>
+                    <item name="480">
+480
+                    </item>
+                    <item name="720">
+720
+                    </item>
+                    <item name="1440">
+1440
+                    </item>
+                    <item name="2880">
+2880
+                    </item>
+                    <item name="10080">
+10080
+                    </item>
+                </string-array>
+                <string-array name="syncFrequency" >
+                    <item name="30">
+30 minutes
+                    </item>
+                    <item name="60">
+1 heure
+                    </item>
+                    <item name="120">
+2 heures
+                    </item>
+                    <item name="180">
+3 heures
+                    </item>
+                    <item name="360">
+6 heures
+                    </item>
+                    <item name="480">
+8 heures
+                    </item>
+                    <item name="720">
+12 heures
+                    </item>
+                    <item name="1440">
+1 jour
+                    </item>
+                    <item name="2880">
+2 jours
+                    </item>
+                    <item name="10080">
+1 semaine
+                    </item>
+                </string-array>
+            </file>
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/values/attrs.xml"
+                qualifiers="" >
+                <declare-styleable name="ButtonBarContainerTheme" >
+                    <attr
+                        name="buttonBarStyle"
+                        format="reference" />
+                    <attr
+                        name="buttonBarButtonStyle"
+                        format="reference" />
+                </declare-styleable>
+            </file>
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/values/colors.xml"
+                qualifiers="" >
+                <color name="red_validation" >#FFFF0000
+                </color>
+                <color name="green_validation" >#FF33CC33
+                </color>
+                <color name="background" >#E5E5E5
+                </color>
+                <color name="black_overlay" >#66000000
+                </color>
+                <color name="blue_video" >#27A9EA
+                </color>
+                <color name="bloc_border" >#B8B8B8
+                </color>
+            </file>
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/values/dimens.xml"
+                qualifiers="" >
+                <dimen name="bloc_border" >1.5dp
+                </dimen>
+                <dimen name="activity_horizontal_margin" >16dp
+                </dimen>
+                <dimen name="activity_vertical_margin" >16dp
+                </dimen>
+                <dimen name="button_margin" >10dp
+                </dimen>
+            </file>
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/values/integers.xml"
+                qualifiers="" >
+                <integer name="DefaultDelayBeforeFade" >
+100
+                </integer>
+            </file>
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/values/strings.xml"
+                qualifiers="" >
+                <string name="title_activity_settings" >Paramètres
+                </string>
+                <string name="Options" >Paramètres
+                </string>
+                <string name="action_settings" >Settings
+                </string>
+                <string name="title_activity_videos" >Vidéos
+                </string>
+                <string name="title_activity_main" >Youtubeurs
+                </string>
+                <string name="app_name" >Youtubeurs
+                </string>
+                <string name="dummy_content" ></string>
+                <string name="error_player" >Erreur en initialisant le player YouTube (%1$s)
+                </string>
+                <string name="initData" >Réinitialiser l\'application
+                </string>
+                <string name="title_activity_response" >Saisie
+                </string>
+                <string name="title_activity_launch" >Youtubeurs
+                </string>
+                <string name="Jouer" >Jouer
+                </string>
+            </file>
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/values/styles.xml"
+                qualifiers="" >
+
+                <style
+                    name="MyButtonCustomTheme"
+                    parent="android:Theme.Holo.Light" >
+                    <item name="android:textStyle">
+italic
+                    </item>
+                    <item name="android:typeface">
+sans
+                    </item>
+                    <item name="android:textColor">
+#FFFFFF
+                    </item>
+                </style>
+
+                <style
+                    name="AppBaseTheme"
+                    parent="android:Theme.Light" >
+
+                    <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+                    -->
+                </style>
+
+                <style
+                    name="Widget.Custom.PtrHeader"
+                    parent="android:Widget" >
+                    <item name="ptrProgressBarColor">
+#A4000A
+                    </item>
+                    <item name="ptrPullText">
+Tirez pour rafraîchir ...
+                    </item>
+                    <item name="ptrRefreshingText">
+Actualisation en cours ...
+                    </item>
+                </style>
+
+                <style
+                    name="MyCustomTheme"
+                    parent="android:Theme.Holo.Light" >
+                    <item name="android:textStyle">
+italic
+                    </item>
+                    <item name="android:typeface">
+sans
+                    </item>
+                    <item name="android:windowFullscreen">
+true
+                    </item>
+                    <item name="android:windowBackground">
+@color/background
+                    </item>
+                    <item name="ptrHeaderStyle">
+@style/Widget.Custom.PtrHeader
+                    </item>
+                </style>
+
+                <style
+                    name="AppTheme"
+                    parent="AppBaseTheme" >
+
+                    <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+                </style>
+            </file>
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/values-sw720dp-land/dimens.xml"
+                qualifiers="sw720dp-land" >
+                <dimen name="activity_horizontal_margin" >128dp
+                </dimen>
+            </file>
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/values-v11/styles.xml"
+                qualifiers="v11" >
+
+                <style
+                    name="AppBaseTheme"
+                    parent="android:Theme.Holo.Light" >
+
+                    <!-- API 11 theme customizations can go here. -->
+                </style>
+            </file>
+            <file
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/values-v14/styles.xml"
+                qualifiers="v14" >
+
+                <style
+                    name="AppBaseTheme"
+                    parent="android:Theme.Holo.Light.DarkActionBar" >
+
+                    <!-- API 14 theme customizations can go here. -->
+                </style>
+            </file>
+            <file
+                name="settings"
+                path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/xml/settings.xml"
+                qualifiers=""
+                type="xml" />
+        </source>
+        <source path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/res/rs/debug" />
+        <source path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/res/generated/debug" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/debug/res" />
+    </dataSet>
+
+</merger>

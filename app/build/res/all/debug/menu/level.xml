@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/menu_delete"
+        android:icon="@drawable/ic_action_delete"
+        android:showAsAction="ifRoom"
+        android:title="Supprimer"/>
+
+    <item
+    	android:id="@+id/menu_refresh"
+        android:icon="@drawable/ic_action_refresh"
+        android:showAsAction="ifRoom"
+        android:title="Actualiser"/>
+</menu><!-- From: file:/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/menu/level.xml -->

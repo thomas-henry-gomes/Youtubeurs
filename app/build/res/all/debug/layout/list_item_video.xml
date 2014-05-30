@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingRight="8dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:background="@color/background" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/bloc_border"
+        android:background="@color/bloc_border">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <com.youtubeurs.lite2.ui.widget.UrlImageView
+                android:id="@+id/userVideoThumbImageView"
+                android:layout_width="fill_parent"
+                android:layout_height="175dp"
+                android:layout_margin="0dp"
+                android:padding="0dp"
+                android:contentDescription="YouTube video thumbnail" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:alpha="0.75"
+                android:src="@drawable/play_alt" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/userVideoTitleTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:padding="5dp"
+            android:text=""
+            android:textColor="#FFFFFF"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textScaleX="1.1"
+            android:background="@color/blue_video"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/userVideoSubTitleLeftTextView"
+                android:layout_width="fill_parent"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingLeft="5dp"
+                android:paddingRight="0dp"
+                android:paddingTop="0dp"
+                android:paddingBottom="5dp"
+                android:text=""
+                android:textColor="#FFFFFF"
+                android:background="@color/blue_video"/>
+
+            <TextView
+                android:id="@+id/userVideoSubTitleRightTextView"
+                android:layout_width="fill_parent"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:paddingLeft="0dp"
+                android:paddingRight="5dp"
+                android:paddingTop="0dp"
+                android:paddingBottom="5dp"
+                android:text=""
+                android:textColor="#FFFFFF"
+                android:background="@color/blue_video"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+<!-- From: file:/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/layout/list_item_video.xml -->

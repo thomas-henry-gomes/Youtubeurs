@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger>
+
+    <dataSet config="0.2.0" >
+        <source path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/exploded-aar/com.github.castorflex.smoothprogressbar/library/0.2.0/assets" />
+    </dataSet>
+    <dataSet config="0.9.3" >
+        <source path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.3/assets" />
+    </dataSet>
+    <dataSet config="main" >
+        <source path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/assets" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/debug/assets" />
+    </dataSet>
+
+</merger>

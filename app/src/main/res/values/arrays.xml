@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="syncFrequency">
+        <item name="30">30 minutes</item>
+        <item name="60">1 heure</item>
+        <item name="120">2 heures</item>
+        <item name="180">3 heures</item>
+        <item name="360">6 heures</item>
+        <item name="480">8 heures</item>
+        <item name="720">12 heures</item>
+        <item name="1440">1 jour</item>
+        <item name="2880">2 jours</item>
+        <item name="10080">1 semaine</item>
+    </string-array>
+    <string-array name="syncFrequencyValues">
+        <item name="30">30</item>
+        <item name="60">60</item>
+        <item name="120">120</item>
+        <item name="180">180</item>
+        <item name="360">360</item>
+        <item name="480">480</item>
+        <item name="720">720</item>
+        <item name="1440">1440</item>
+        <item name="2880">2880</item>
+        <item name="10080">10080</item>
+    </string-array>
+</resources>

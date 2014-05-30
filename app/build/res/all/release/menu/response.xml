@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/menu_share"
+        android:icon="@drawable/ic_action_share"
+        android:showAsAction="ifRoom"
+        android:title="Partager"/>
+</menu>
+<!-- From: file:/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/src/main/res/menu/response.xml -->
