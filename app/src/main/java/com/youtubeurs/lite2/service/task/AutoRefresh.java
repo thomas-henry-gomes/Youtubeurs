@@ -21,7 +21,6 @@ import com.youtubeurs.lite2.MainActivity;
 import com.youtubeurs.lite2.MySQLite;
 import com.youtubeurs.lite2.R;
 import com.youtubeurs.lite2.Tools;
-import com.youtubeurs.lite2.VideosActivity;
 import com.youtubeurs.lite2.domain.Library;
 import com.youtubeurs.lite2.domain.User;
 import com.youtubeurs.lite2.domain.Video;
@@ -178,8 +177,7 @@ public class AutoRefresh extends IntentService {
         nbReturns = nbReturns + 1;
         int newVideosNumber = 0;
 
-        String v = "";
-        v = (String) msg.getData().get("ERROR");
+        String v = (String) msg.getData().get("ERROR");
 
         if ("true".equals(v)) {
             return;
@@ -199,6 +197,10 @@ public class AutoRefresh extends IntentService {
                 newVideos = true;
                 newVideosNumber++;
                 database.insertVideo(videoTmp);
+            }
+            else {
+                // On arrête le traitement : toutes les vidéos qui suivent doivent être déjà  en base
+                break;
             }
         }
         database.closeDatabase();
