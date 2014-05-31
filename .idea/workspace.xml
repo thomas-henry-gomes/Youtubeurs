@@ -26,7 +26,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3dd75e70-f106-47f7-b2a4-02de58e11933" name="Default" comment="Update modification commit">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/app/build/dex/debug/classes.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/youtubeurs/lite2/service/task/AutoRefresh.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/youtubeurs/lite2/service/task/AutoRefresh.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Youtubeurs.iml" afterPath="$PROJECT_DIR$/Youtubeurs.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Youtubeurs.iws" />
@@ -121,30 +125,7 @@
     <favorites_list name="Youtubeurs" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="AutoRefresh.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/youtubeurs/lite2/service/task/AutoRefresh.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.10723192" vertical-offset="3092" max-vertical-offset="4515">
-              <caret line="215" column="0" selection-start-line="215" selection-start-column="0" selection-end-line="215" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GetYouTubeUserVideosTask.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/youtubeurs/lite2/service/task/GetYouTubeUserVideosTask.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1273" max-vertical-offset="2190">
-              <caret line="141" column="51" selection-start-line="141" selection-start-column="51" selection-end-line="141" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -605,7 +586,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4183114123000" />
+        <entry key="$PROJECT_DIR$" value="4204649895000" />
         <entry key="$USER_HOME$/Development/ProverbeQuiz/Workspace/ChoisirLePrenomDeSonBebe" value="1378503918000" />
         <entry key="$USER_HOME$/Development/ProverbeQuiz/Workspace2/Youtubeurs" value="1378507096000" />
       </map>
@@ -909,9 +890,9 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/youtubeurs/lite2/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/youtubeurs/lite2/util/imageutils/ImageLoader.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/youtubeurs/lite2/service/task/AutoRefresh.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       </list>
     </option>
   </component>
@@ -919,9 +900,10 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
-    <option name="width" value="1280" />
-    <option name="height" value="774" />
+    <option name="x" value="96" />
+    <option name="y" value="71" />
+    <option name="width" value="1728" />
+    <option name="height" value="881" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -1049,40 +1031,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="lite2" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Youtubeurs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Youtubeurs" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lite2" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="task" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1236,19 +1184,6 @@
       </ExternalSystemSettings>
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -1274,6 +1209,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1438,34 +1386,38 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="774" extended-state="6" />
-    <editor active="true" />
+    <frame x="96" y="71" width="1728" height="881" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32826748" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44680852" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8905775" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3281046" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44575164" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8888889" sideWeight="0.31553975" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8905775" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31663975" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32826748" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8905775" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19709209" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3267974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8888889" sideWeight="0.6844603" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19691578" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3085622" sideWeight="0.8039514" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29159936" sideWeight="0.19604863" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28115502" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30723608" sideWeight="0.19604863" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27973858" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26171243" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.72036475" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5486322" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1493,17 +1445,10 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="22" />
+      <option name="time" value="29" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/app/build/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.3/classes.jar!/uk/co/senab/actionbarpulltorefresh/library/PullToRefreshLayout.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1266892" vertical-offset="0" max-vertical-offset="1005">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/integers.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0952381" vertical-offset="0" max-vertical-offset="630">
@@ -1513,23 +1458,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_level.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.444445" vertical-offset="57" max-vertical-offset="735">
           <caret line="28" column="74" selection-start-line="28" selection-start-column="74" selection-end-line="28" selection-end-column="74" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_response.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_response.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="603">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/proverb.xml">
@@ -1617,13 +1562,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.0" vertical-offset="132" max-vertical-offset="735">
           <caret line="34" column="40" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="40" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/youtubeurs/lite2/Tools.java">
@@ -1807,26 +1752,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/youtubeurs/lite2/MySQLite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4132901" vertical-offset="4650" max-vertical-offset="5910">
-          <caret line="342" column="21" selection-start-line="342" selection-start-column="21" selection-end-line="342" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.104166664" vertical-offset="0" max-vertical-offset="1395">
-          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/youtubeurs/lite2/SettingsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.36466774" vertical-offset="255" max-vertical-offset="2115">
           <caret line="56" column="24" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1841,7 +1770,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="1005">
           <caret line="63" column="35" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1849,9 +1777,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17341977" vertical-offset="328" max-vertical-offset="2760">
           <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1863,12 +1788,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/youtubeurs/lite2/domain/Video.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="573" max-vertical-offset="1665">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding>
+            <element signature="e#1013#1014#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/youtubeurs/lite2/MySQLite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4628" max-vertical-offset="5910">
+          <caret line="332" column="0" selection-start-line="332" selection-start-column="0" selection-end-line="332" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08141112" vertical-offset="0" max-vertical-offset="1395">
+          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/youtubeurs/lite2/service/task/AutoRefresh.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10723192" vertical-offset="3092" max-vertical-offset="4515">
-          <caret line="215" column="0" selection-start-line="215" selection-start-column="0" selection-end-line="215" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.5690608" vertical-offset="2603" max-vertical-offset="4545">
+          <caret line="205" column="28" selection-start-line="205" selection-start-column="28" selection-end-line="205" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1491#1631#0" expanded="true" />
+            <element signature="e#1620#1621#0" expanded="true" />
           </folding>
         </state>
       </provider>

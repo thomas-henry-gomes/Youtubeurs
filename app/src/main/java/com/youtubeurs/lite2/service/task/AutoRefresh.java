@@ -199,7 +199,7 @@ public class AutoRefresh extends IntentService {
                 database.insertVideo(videoTmp);
             }
             else {
-                // On arrête le traitement : toutes les vidéos qui suivent doivent être déjà  en base
+                // On arrête le traitement : toutes les vidéos qui suivent doivent être déjà en base
                 break;
             }
         }
