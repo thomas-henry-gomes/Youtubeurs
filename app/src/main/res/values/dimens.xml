@@ -10,4 +10,7 @@
     <!-- Bloc Border -->
     <dimen name="bloc_border">1.5dp</dimen>
 
+    <!--  -->
+    <dimen name="ptrHeaderHeight">64dp</dimen>
+
 </resources>

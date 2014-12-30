@@ -28,6 +28,7 @@ import com.youtubeurs.lite2.ui.widget.UrlImageView;
  */
 public class UsersAdapter extends BaseAdapter {
     final String VIDEO_AUTHOR = "video_author";
+    final String INTERSTITIAL_ADS = "interstitial_ads";
 
     private Context applicationContext = null;
 
@@ -143,6 +144,7 @@ public class UsersAdapter extends BaseAdapter {
 
                 Intent intent = new Intent(v.getContext(), VideosActivity.class);
                 intent.putExtra(VIDEO_AUTHOR, ((String[]) v.getTag())[0]);
+                intent.putExtra(INTERSTITIAL_ADS, "false");
                 v.getContext().startActivity(intent);
                 ((Activity) v.getContext()).overridePendingTransition(R.anim.fadeout, R.anim.fadein);
             }

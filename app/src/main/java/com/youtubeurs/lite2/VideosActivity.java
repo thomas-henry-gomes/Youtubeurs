@@ -9,6 +9,7 @@ import java.util.Random;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
@@ -16,6 +17,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.os.StrictMode;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -28,12 +30,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.ads.Ad;
-import com.google.ads.AdListener;
-import com.google.ads.AdRequest;
-import com.google.ads.AdRequest.ErrorCode;
-import com.google.ads.AdView;
-import com.google.ads.InterstitialAd;
+import com.google.android.gms.ads.*;
 import com.google.analytics.tracking.android.Fields;
 import com.google.analytics.tracking.android.GoogleAnalytics;
 import com.google.analytics.tracking.android.MapBuilder;
@@ -57,7 +54,7 @@ import uk.co.senab.actionbarpulltorefresh.library.ActionBarPullToRefresh;
 import uk.co.senab.actionbarpulltorefresh.library.listeners.OnRefreshListener;
 import uk.co.senab.actionbarpulltorefresh.library.PullToRefreshLayout;
 
-public class VideosActivity extends Activity implements AdListener, OnRefreshListener {
+public class VideosActivity extends ActionBarActivity implements OnRefreshListener {
 
 	private AdView adView;
 	private InterstitialAd interstitial;
@@ -77,7 +74,7 @@ public class VideosActivity extends Activity implements AdListener, OnRefreshLis
 	String videoAuthor = "";
 
 	final String INTERSTITIAL_ADS = "interstitial_ads";
-	String interstitialAds = "";
+	public String interstitialAds = "";
 
 	// This is the handler that receives the response when the YouTube task has finished
 	static Handler responseHandler = null;
@@ -127,36 +124,6 @@ public class VideosActivity extends Activity implements AdListener, OnRefreshLis
                 // Finally commit the setup to our PullToRefreshLayout
                 .setup(mPullToRefreshLayout);
 
-		if ("true".equals(interstitialAds)) {
-			database.openDatabase();
-			String nopub = database.getParam("NOPUB");
-
-            boolean noPubTmp = false;
-            if(database.getParam("NOPUB-TIME") != null){
-                long timePrev = Long.parseLong(database.getParam("NOPUB-TIME"));
-                long timeNext = new Date().getTime();
-                long timeDiff = timeNext - timePrev;
-
-                if(timeDiff <= Tools.getLapsOfNoPub()){
-                    noPubTmp = true;
-                }
-            }
-
-			database.closeDatabase();
-
-			if ((nopub == null) && (!noPubTmp)) {
-                Random random = new Random();
-                // Chiffre aléatoire entre 0 et 100 compris
-                int valeur = random.nextInt(101);
-                if (valeur <= 20) {
-                    interstitial = new InterstitialAd(this, Tools.getInterstitialAdsId(videoAuthor));
-                    AdRequest adRequest = new AdRequest();
-                    interstitial.setAdListener(this);
-                    interstitial.loadAd(adRequest);
-                }
-			}
-		}
-
 		//setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
 
         listView = (VideosListView) findViewById(R.id.videosListView);
@@ -183,15 +150,15 @@ public class VideosActivity extends Activity implements AdListener, OnRefreshLis
                 }
 
                 // Gestion de la barre d'action
-                if (getActionBar() != null) {
+                if (getSupportActionBar() != null) {
                     if(firstVisibleItem > (preFirst + 1)) {
                         preFirst = firstVisibleItem;
-                        getActionBar().hide();
+                        getSupportActionBar().hide();
                     }
                     else {
                         if(firstVisibleItem < (preFirst - 1)) {
                             preFirst = firstVisibleItem;
-                            getActionBar().show();
+                            getSupportActionBar().show();
                         }
                     }
                 }
@@ -226,12 +193,14 @@ public class VideosActivity extends Activity implements AdListener, OnRefreshLis
 		if (listVideos != null)
 			complement = complement.concat("" + listVideos.size());
         if (user != null)
-		    Tools.setupActionBar(this, getActionBar(), complement, user.getName());
+		    Tools.setupActionBar(this, getSupportActionBar(), complement, user.getName());
         else
-            Tools.setupActionBar(this, getActionBar(), complement, videoAuthor);
+            Tools.setupActionBar(this, getSupportActionBar(), complement, videoAuthor);
 
 		// Ajout de la PUB
 		Tools.setupAds(getApplicationContext(), this, adView);
+
+        interstitialAds = "false";
 	}
 
 	/**
@@ -333,9 +302,9 @@ public class VideosActivity extends Activity implements AdListener, OnRefreshLis
 
         user = database.getUserFromUsername(videoAuthor);
         if (user != null)
-            Tools.setupActionBar(this, getActionBar(), complement, user.getName());
+            Tools.setupActionBar(this, getSupportActionBar(), complement, user.getName());
         else
-            Tools.setupActionBar(this, getActionBar(), complement, videoAuthor);
+            Tools.setupActionBar(this, getSupportActionBar(), complement, videoAuthor);
 
 		// Because we have created a custom ListView we don't have to worry about setting the adapter in the activity
 		// we can just call our custom method with the list of items we want to display
@@ -391,6 +360,111 @@ public class VideosActivity extends Activity implements AdListener, OnRefreshLis
 			adView.destroy();
 		super.onDestroy();
 	}
+
+    @Override
+    public void onPause() {
+        if (adView != null)
+            adView.pause();
+        super.onPause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (adView != null)
+            adView.resume();
+
+        if ("true".equals(interstitialAds)) {
+            database = new MySQLite(getApplicationContext());
+            database.openDatabase();
+            String nopub = database.getParam("NOPUB");
+
+            boolean noPubTmp = false;
+            if(database.getParam("NOPUB-TIME") != null){
+                long timePrev = Long.parseLong(database.getParam("NOPUB-TIME"));
+                long timeNext = new Date().getTime();
+                long timeDiff = timeNext - timePrev;
+
+                if(timeDiff <= Tools.getLapsOfNoPub()){
+                    noPubTmp = true;
+                }
+            }
+
+            database.closeDatabase();
+
+            if ((nopub == null) && (!noPubTmp)) {
+                Random random = new Random();
+                // Chiffre aléatoire entre 0 et 100 compris
+                int valeur = random.nextInt(101);
+                if (valeur <= 30) {
+                    interstitial = new InterstitialAd(this);
+                    interstitial.setAdUnitId(Tools.getInterstitialAdsId(videoAuthor));
+                    AdRequest adRequest = new AdRequest.Builder().build();
+                    interstitial.setAdListener(new AdListener() {
+                        /**
+                         * Called when an Activity is created in front of your app,
+                         * presenting the user with a full-screen ad UI in response to their touching ad.
+                         */
+                        public void onAdOpened() {
+                            interstitialAds = "false";
+                            //Tools.showToast(getApplicationContext(), "onPresentScreen", Toast.LENGTH_LONG);
+                            Tools.showToast(getApplicationContext(), "Vous pouvez désactiver temporairement les publicités\nen cliquant sur celle qui vient de s'ouvrir !!!", Toast.LENGTH_LONG);
+                        }
+
+                        /**
+                         * Called when the full-screen Activity presented with onPresentScreen has been dismissed
+                         * and control is returning to your app.
+                         */
+                        public void onAdClosed() {
+                            interstitialAds = "false";
+                            //Tools.showToast(getApplicationContext(), "onDismissScreen", Toast.LENGTH_LONG);
+                            if (clickPub){
+                                clickPub = false;
+                                database.openDatabase();
+                                if(database.getParam("NOPUB-TIME") == null)
+                                    database.insertParam("NOPUB-TIME", "" + (new Date().getTime()));
+                                else
+                                    database.updateParam("NOPUB-TIME", "" + (new Date().getTime()));
+                                database.closeDatabase();
+                                Tools.showToast(getApplicationContext(), "Merci pour votre soutien, les publicités sont maintenant désactivées temporairement.", Toast.LENGTH_LONG);
+                                //this.recreate();
+                            }
+                        }
+
+                        /**
+                         * Called when an Ad touch will launch a new application.
+                         */
+                        public void onAdLeftApplication() {
+                            interstitialAds = "false";
+                            //Tools.showToast(getApplicationContext(), "onLeaveApplication", Toast.LENGTH_LONG);
+                            clickPub = true;
+                        }
+
+                        /**
+                         * Sent when AdView.loadAd has succeeded
+                         */
+                        public void onAdLoaded() {
+                            interstitial.show();
+                        }
+
+                        /**
+                         * Sent when loadAd has failed,
+                         * typically because of network failure, an application configuration error, or a lack of ad inventory.
+                         */
+                        public void onAdFailedToLoad(int errorCode) {
+                            //Tools.showToast(getApplicationContext(), "onFailedToReceiveAd Code:" + arg1, Toast.LENGTH_LONG);
+                        }
+                    });
+                    interstitial.loadAd(adRequest);
+                }
+            }
+
+            interstitialAds = "false";
+        }
+        else {
+            interstitialAds = "false";
+        }
+    }
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -465,7 +539,7 @@ public class VideosActivity extends Activity implements AdListener, OnRefreshLis
             title.setText("--- ATTENTION ---");
             title.setPadding(15, 15, 15, 15);
             title.setGravity(Gravity.CENTER);
-            title.setTextColor(Color.BLACK);
+            title.setTextColor(getResources().getColor(R.color.material_textColorPrimary));
             title.setTextSize(19);
             adb.setCustomTitle(title);
 
@@ -492,9 +566,19 @@ public class VideosActivity extends Activity implements AdListener, OnRefreshLis
             TextView messageText = (TextView) ad.findViewById(android.R.id.message);
             messageText.setPadding(15, 15, 15, 15);
             messageText.setGravity(Gravity.CENTER);
-            messageText.setTextColor(Color.BLACK);
+            messageText.setTextColor(getResources().getColor(R.color.material_textColorPrimary));
             messageText.setTextSize(18);
             ad.show();
+
+            return true;
+        case R.id.menu_share:
+            interstitialAds = "false";
+
+            Intent i = new Intent(Intent.ACTION_SEND);
+            i.setType("text/plain");
+            i.putExtra(Intent.EXTRA_TEXT, "Suit le Youtubeur " + videoAuthor + " avec l'application Android Youtubeurs : https://play.google.com/store/apps/details?id=com.youtubeurs.lite2 .");
+            startActivity(Intent.createChooser(i, "Partager avec ..."));
+            overridePendingTransition(R.anim.fadeout, R.anim.fadein);
 
             return true;
 		}
@@ -506,63 +590,6 @@ public class VideosActivity extends Activity implements AdListener, OnRefreshLis
 		this.finish();
         overridePendingTransition(R.anim.fadeout, R.anim.fadein);
 	}
-
-
-    /**
-     * Called when an Activity is created in front of your app,
-     * presenting the user with a full-screen ad UI in response to their touching ad.
-     */
-    @Override
-    public void onPresentScreen(Ad arg0) {
-        //Tools.showToast(getApplicationContext(), "onPresentScreen", Toast.LENGTH_LONG);
-        Tools.showToast(getApplicationContext(), "Vous pouvez désactiver temporairement les publicités en cliquant sur celle qui vient de s'ouvrir !!!", Toast.LENGTH_LONG);
-    }
-
-    /**
-     * Called when the full-screen Activity presented with onPresentScreen has been dismissed
-     * and control is returning to your app.
-     */
-    @Override
-	public void onDismissScreen(Ad arg0) {
-		//Tools.showToast(getApplicationContext(), "onDismissScreen", Toast.LENGTH_LONG);
-        if (clickPub){
-            clickPub = false;
-            database.openDatabase();
-            if(database.getParam("NOPUB-TIME") == null)
-                database.insertParam("NOPUB-TIME", "" + (new Date().getTime()));
-            else
-                database.updateParam("NOPUB-TIME", "" + (new Date().getTime()));
-            database.closeDatabase();
-            Tools.showToast(getApplicationContext(), "Merci pour votre soutien, les publicités sont maintenant désactivées temporairement.", Toast.LENGTH_LONG);
-            this.recreate();
-        }
-	}
-
-    /**
-     * Called when an Ad touch will launch a new application.
-     */
-    @Override
-	public void onLeaveApplication(Ad arg0) {
-		//Tools.showToast(getApplicationContext(), "onLeaveApplication", Toast.LENGTH_LONG);
-        clickPub = true;
-	}
-
-    /**
-     * Sent when AdView.loadAd has succeeded
-     */
-    @Override
-	public void onReceiveAd(Ad arg0) {
-		interstitial.show();
-	}
-
-    /**
-     * Sent when loadAd has failed,
-     * typically because of network failure, an application configuration error, or a lack of ad inventory.
-     */
-    @Override
-    public void onFailedToReceiveAd(Ad arg0, ErrorCode arg1) {
-        //Tools.showToast(getApplicationContext(), "onFailedToReceiveAd Code:" + arg1, Toast.LENGTH_LONG);
-    }
 
     @Override
     public void onRefreshStarted(View view) {
@@ -588,4 +615,6 @@ public class VideosActivity extends Activity implements AdListener, OnRefreshLis
         // because who cares if we get a callback once the activity has stopped? not me!
         responseHandler = null;
     }
+
+
 }

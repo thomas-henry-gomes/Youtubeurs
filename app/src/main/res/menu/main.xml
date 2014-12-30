@@ -1,18 +1,20 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto" >
     <item
         android:id="@+id/menu_add"
-        android:showAsAction="never"
+        app:showAsAction="never"
         android:title="Ajouter un YouTubeur"/>
     <item
         android:id="@+id/menu_share"
-        android:showAsAction="never"
+        app:showAsAction="never"
         android:title="Partager" />
     <item
         android:id="@+id/menu_facebook"
-        android:showAsAction="never"
+        app:showAsAction="never"
         android:title="Facebook"/>
     <item
         android:id="@+id/menu_param"
-        android:showAsAction="never"
+        android:icon="@drawable/ic_settings_white"
+        app:showAsAction="ifRoom"
         android:title="Paramètres"/>
 </menu>

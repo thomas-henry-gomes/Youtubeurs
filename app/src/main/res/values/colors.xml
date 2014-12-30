@@ -3,8 +3,26 @@
     <color name="black_overlay">#66000000</color>
 	<color name="red_validation">#FFFF0000</color>
 	<color name="green_validation">#FF33CC33</color>
-    <color name="blue_video">#27A9EA</color>
+    <color name="blue_video">#2196F3</color>
     <color name="background">#E5E5E5</color>
     <color name="bloc_border">#B8B8B8</color>
+
+    <color name="material_blue_500">#2196F3</color>
+    <color name="material_blue_700">#1976D2</color>
+    <color name="material_green_500">#4CAF50</color>
+    <color name="material_green_700">#388E3C</color>
+    <color name="material_green_A200">#69F0AE</color>
+    <color name="material_red_500">#F44336</color>
+    <color name="material_yellow_500">#FFEB3B</color>
+    <color name="material_grey_800">#424242</color>
+
+    <color name="material_textColorPrimary">#FFFFFF</color>
+
+    <integer-array name="gplus_colors">
+        <item>@color/material_green_500</item>
+        <item>@color/material_blue_500</item>
+        <item>@color/material_red_500</item>
+        <item>@color/material_yellow_500</item>
+    </integer-array>
 
 </resources>

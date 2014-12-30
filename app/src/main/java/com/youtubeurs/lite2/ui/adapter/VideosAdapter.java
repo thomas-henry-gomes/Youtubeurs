@@ -18,6 +18,7 @@ import android.widget.TextView;
 import com.youtubeurs.lite2.MyApplication;
 import com.youtubeurs.lite2.MySQLite;
 import com.youtubeurs.lite2.R;
+import com.youtubeurs.lite2.VideosActivity;
 import com.youtubeurs.lite2.VisualisationActivity;
 import com.youtubeurs.lite2.domain.Video;
 import com.youtubeurs.lite2.ui.widget.UrlImageView;
@@ -145,6 +146,11 @@ public class VideosAdapter extends BaseAdapter {
 				video.setCount(count);
 				database.updateVideo(video);
 				database.closeDatabase();
+
+                TextView SubTitleRight = (TextView) v.findViewById(R.id.userVideoSubTitleRightTextView);
+                SubTitleRight.setText("Tu as visionné cette vidéo " + count + " fois");
+
+                ((VideosActivity)v.getContext()).interstitialAds = "true";
 
                 SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(v.getContext());
                 if (sharedPrefs.getBoolean("prefExtPlay", false)) {

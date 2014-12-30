@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/pre-dexed/debug/classes-faeeb9bbef100e88ae16a667ca08bb695016e1e9.jar"
+        jar="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/build/exploded-aar/com.github.chrisbanes.actionbarpulltorefresh/library/0.9.9/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="06ca4ea902f14efb76284d918edb085df33cc365"/>
+    <item
+        dex="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/pre-dexed/debug/support-annotations-20.0.0-6fe402c4fff71e763d39cd6b0d6cf35762b89405.jar"
+        jar="/Applications/Development/adt-bundle-mac-x86_64-20130219/sdk/extras/android/m2repository/com/android/support/support-annotations/20.0.0/support-annotations-20.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa"/>
+    <item
+        dex="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/pre-dexed/debug/classes-88e6ce68dde586268cde31f2e04ad6fa5d8591b2.jar"
+        jar="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/build/exploded-aar/com.github.castorflex.smoothprogressbar/library/0.4.0/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="6ca319f998430aa20c4dde97ba6df213d6cf3dd0"/>
+    <item
+        dex="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/pre-dexed/debug/internal_impl-20.0.0-fc9e1fb629e05e7a7dbd782701c44354455f97cf.jar"
+        jar="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/build/exploded-aar/com.android.support/support-v4/20.0.0/libs/internal_impl-20.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d"/>
+    <item
+        dex="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/pre-dexed/debug/classes-3c9b36c27a5fcf952b434fcb1359d90023c6cde9.jar"
+        jar="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/build/exploded-aar/com.android.support/support-v4/20.0.0/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="8694693636ab36910c8100ce527c258ff3ebece0"/>
+    <item
+        dex="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/app/build/pre-dexed/debug/classes-10f53d93ef4f17fe8088cf7772a308532c427ad8.jar"
+        jar="/Applications/Development/AndroidStudioWorkspace/Youtubeurs/build/exploded-aar/com.google.android.gms/play-services/5.2.08/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="1ed7a7a05185651f9af41ad93711cb96b66f331c"/>
+
+</pre-dex-items>

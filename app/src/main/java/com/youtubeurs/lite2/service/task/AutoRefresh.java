@@ -17,6 +17,7 @@ import android.preference.PreferenceManager;
 import android.support.v4.app.NotificationCompat;
 import android.widget.Toast;
 
+import com.google.analytics.tracking.android.ServiceManager;
 import com.youtubeurs.lite2.MainActivity;
 import com.youtubeurs.lite2.MySQLite;
 import com.youtubeurs.lite2.R;
@@ -158,13 +159,17 @@ public class AutoRefresh extends IntentService {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         handler = new Handler();
-        return super.onStartCommand(intent, flags, startId);
+
+        // We want this service to continue running until it is explicitly
+        // stopped, so return sticky.
+        return START_STICKY;
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
         alreadyRunning = false;
+        startService(new Intent(this, AutoRefresh.class));
     }
 
     /**

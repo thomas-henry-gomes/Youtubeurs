@@ -1,13 +1,19 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto" >
     <item
         android:id="@+id/menu_delete"
-        android:icon="@drawable/ic_action_delete"
-        android:showAsAction="ifRoom"
+        android:icon="@drawable/ic_delete_white"
+        app:showAsAction="ifRoom"
         android:title="Supprimer"/>
 
     <item
+        android:id="@+id/menu_share"
+        android:icon="@drawable/ic_share_white"
+        app:showAsAction="ifRoom"
+        android:title="Partager ..."/>
+
+    <item
     	android:id="@+id/menu_refresh"
-        android:icon="@drawable/ic_action_refresh"
-        android:showAsAction="ifRoom"
+        app:showAsAction="never"
         android:title="Actualiser"/>
 </menu>

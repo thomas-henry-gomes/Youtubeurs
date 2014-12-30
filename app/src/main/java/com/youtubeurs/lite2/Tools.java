@@ -4,7 +4,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.util.Date;
 
-import android.app.ActionBar;
+import android.support.v7.app.ActionBar;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.Context;
@@ -15,11 +15,7 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.google.ads.Ad;
-import com.google.ads.AdListener;
-import com.google.ads.AdRequest;
-import com.google.ads.AdSize;
-import com.google.ads.AdView;
+import com.google.android.gms.ads.*;
 import com.youtubeurs.lite2.service.task.AutoRefresh;
 
 public class Tools {
@@ -74,6 +70,7 @@ public class Tools {
         database.insertUser("nqtv", "Rémi Gaillard", "http://i1.ytimg.com/u/mPSwsooZq8an7xOLQQhAdw/channels4_tablet_banner_low.jpg?v=517b26c9", "TRUE");
         database.insertUser("aMOODIEsqueezie", "Squeezie", "http://i1.ytimg.com/u/Weg2Pkate69NFdBeuRFTAw/channels4_tablet_banner_low.jpg?v=514dd807", "TRUE");
         database.insertUser("TomliVlogs", "Thomas Gauthier", "http://i1.ytimg.com/u/x0oS6YmHSbOMnN3vQvTR0Q/channels4_tablet_banner_low.jpg?v=515b5ebc", "TRUE");
+        database.insertUser("LeRiiiiiiiireJaune", "Le Rire Jaune", "http://yt3.ggpht.com/-A_V85qYncHY/UsQ0XiymYLI/AAAAAAAAAOU/JtN7t6O_rHA/w2120-fcrop64=1,00005a57ffffa5a8-nd/channels4_banner.jpg", "TRUE");
     }
 
 	/*--------------------------------------------------------------------------------------------------*/
@@ -96,10 +93,11 @@ public class Tools {
 
 		// On initialise les sous-titres
 		if (activity.getClass().equals(VideosActivity.class)) {
+            actionBar.setTitle(complement2);
 			if ("".equals(complement))
-				actionBar.setSubtitle("Vidéos de " + complement2);
+				actionBar.setSubtitle("");
 			else
-				actionBar.setSubtitle(complement + " vidéos de " + complement2);
+				actionBar.setSubtitle(complement + " vidéos");
 		}
 		else if (activity.getClass().equals(SettingsActivity.class)) {
 			actionBar.setSubtitle("Choisissez un paramètre");
@@ -157,8 +155,10 @@ public class Tools {
 
 		LinearLayout layoutMain = (LinearLayout) activity.findViewById(R.id.LinearLayoutAds);
 
-		adView = new AdView(activity, AdSize.BANNER, "ca-app-pub-3881234064367598/5596527463");
-		adView.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.BOTTOM);
+		adView = new AdView(activity);
+        adView.setAdUnitId("ca-app-pub-3881234064367598/5596527463");
+        adView.setAdSize(AdSize.BANNER);
+		//adView.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.BOTTOM);
 
         adView.setAdListener(new AdListener() {
             /**
@@ -166,7 +166,7 @@ public class Tools {
              * presenting the user with a full-screen ad UI in response to their touching ad.
              */
             @Override
-            public void onPresentScreen(Ad arg0) {
+            public void onAdOpened() {
             }
 
             /**
@@ -174,14 +174,14 @@ public class Tools {
              * and control is returning to your app.
              */
             @Override
-            public void onDismissScreen(Ad arg0) {
+            public void onAdClosed() {
             }
 
             /**
              * Called when an Ad touch will launch a new application.
              */
             @Override
-            public void onLeaveApplication(Ad arg0) {
+            public void onAdLeftApplication() {
                 database.openDatabase();
                 if(database.getParam("NOPUB-TIME") == null)
                     database.insertParam("NOPUB-TIME", "" + (new Date().getTime()));
@@ -196,7 +196,7 @@ public class Tools {
              * Sent when AdView.loadAd has succeeded
              */
             @Override
-            public void onReceiveAd(Ad arg0) {
+            public void onAdLoaded() {
                 int px = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 50, context1.getResources().getDisplayMetrics());
                 if (activity1.getClass().equals(VideosActivity.class)) {
                     FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.FILL_PARENT, FrameLayout.LayoutParams.FILL_PARENT);
@@ -215,16 +215,15 @@ public class Tools {
              * typically because of network failure, an application configuration error, or a lack of ad inventory.
              */
             @Override
-            public void onFailedToReceiveAd(Ad ad, AdRequest.ErrorCode errorCode) {
+            public void onAdFailedToLoad(int errorCode) {
+                //Tools.showToast(context1, "onAdFailedToLoad : " + errorCode, Toast.LENGTH_LONG);
             }
         });
 
 		layoutMain.addView(adView);
 
-		AdRequest adRequest = new AdRequest();
-
-		// adRequest.addTestDevice("01ad0cf6cc11d80e"); // Pour les tests
-
+		AdRequest adRequest = new AdRequest.Builder().build();
+        //AdRequest adRequest = new AdRequest.Builder().addTestDevice("01ad0cf6cc11d80e").build(); // Pour les tests
 		adView.loadAd(adRequest);
 	}
 

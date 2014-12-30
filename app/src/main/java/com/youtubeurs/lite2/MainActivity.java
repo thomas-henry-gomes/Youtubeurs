@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,12 +20,12 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.ads.AdView;
+import com.google.android.gms.ads.*;
 import com.google.analytics.tracking.android.EasyTracker;
 import com.youtubeurs.lite2.domain.User;
 import com.youtubeurs.lite2.ui.widget.UsersListView;
 
-public class MainActivity extends Activity {
+public class MainActivity extends ActionBarActivity {
 	private AdView adView;
 
 	final String VIDEO_AUTHOR = "video_author";
@@ -40,7 +41,7 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 
 		// Set up the action bar
-		Tools.setupActionBar(this, getActionBar(), "", "");
+		Tools.setupActionBar(this, getSupportActionBar(), "", "");
 
 		nbClicHome = 0;
 		database = new MySQLite(getApplicationContext());
@@ -62,7 +63,7 @@ public class MainActivity extends Activity {
             title.setText("--- NOUVEAU ---");
             title.setPadding(15, 15, 15, 15);
             title.setGravity(Gravity.CENTER);
-            title.setTextColor(Color.BLACK);
+            title.setTextColor(getResources().getColor(R.color.material_textColorPrimary));
             title.setTextSize(19);
             adb.setCustomTitle(title);
 
@@ -80,7 +81,7 @@ public class MainActivity extends Activity {
             TextView messageText = (TextView) ad.findViewById(android.R.id.message);
             messageText.setPadding(15, 15, 15, 15);
             messageText.setGravity(Gravity.CENTER);
-            messageText.setTextColor(Color.BLACK);
+            messageText.setTextColor(getResources().getColor(R.color.material_textColorPrimary));
             messageText.setTextSize(18);
             ad.show();
         }
@@ -95,6 +96,8 @@ public class MainActivity extends Activity {
 			adView.destroy();
 		super.onDestroy();
 	}
+
+
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -142,12 +145,13 @@ public class MainActivity extends Activity {
             title.setText("Ajouter un YouTubeur");
             title.setPadding(15, 15, 15, 15);
             title.setGravity(Gravity.CENTER);
-            title.setTextColor(Color.BLACK);
+            title.setTextColor(getResources().getColor(R.color.material_textColorPrimary));
             title.setTextSize(19);
             adb.setCustomTitle(title);
 
             adb.setMessage("Saisissez ci-dessous un YouTubeur valide (utilisez son user YouTube : http://www.youtube.com/user/xxx/ où xxx est le user à utiliser) :");
             final EditText input = new EditText(this);
+            input.setTextColor(getResources().getColor(R.color.material_textColorPrimary));
             adb.setView(input);
             adb.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
@@ -166,7 +170,7 @@ public class MainActivity extends Activity {
             TextView messageText = (TextView) ad.findViewById(android.R.id.message);
             messageText.setPadding(15, 15, 15, 15);
             messageText.setGravity(Gravity.CENTER);
-            messageText.setTextColor(Color.BLACK);
+            messageText.setTextColor(getResources().getColor(R.color.material_textColorPrimary));
             messageText.setTextSize(18);
             ad.show();
 

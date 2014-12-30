@@ -27,7 +27,7 @@
             android:defaultValue="true" />
         <CheckBoxPreference
             android:title="Lecture externe"
-            android:summary="La vidéo se lance dans une application externe. A activer si la lecture interne dans l'application pose problème sur votre device."
+            android:summary="La vidéo se lance dans une application externe (YouTube).\nA activer si la lecture interne dans l'application pose problème sur votre device."
             android:key="prefExtPlay"
             android:defaultValue="false" />
     </PreferenceCategory>

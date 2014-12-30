@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.LinearLayout;
@@ -15,6 +16,7 @@ import com.google.analytics.tracking.android.MapBuilder;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayer.ErrorReason;
 import com.google.android.youtube.player.YouTubePlayerView;
+import com.google.android.youtube.player.YouTubeStandalonePlayer;
 import com.youtubeurs.lite2.domain.User;
 
 public class VisualisationActivity extends YouTubeFailureRecoveryActivity {
@@ -30,7 +32,7 @@ public class VisualisationActivity extends YouTubeFailureRecoveryActivity {
 	final String VIDEO_AUTHOR = "video_author";
 	String videoAuthor = "";
 
-	ActionBar ab = null;
+    //TODO ActionBar ab = null;
 
     private MySQLite database;
 
@@ -61,7 +63,7 @@ public class VisualisationActivity extends YouTubeFailureRecoveryActivity {
 		}
 
 		// Set up the action bar
-		Tools.setupActionBar(this, getActionBar(), videoTitle, "");
+		//TODO Tools.setupActionBar(this, getSupportActionBar(), videoTitle, "");
 
 		playerView = (YouTubePlayerView) findViewById(R.id.player);
 		playerView.initialize(DeveloperKey.DEVELOPER_KEY, this);
@@ -72,8 +74,8 @@ public class VisualisationActivity extends YouTubeFailureRecoveryActivity {
 		playerParams.width = LayoutParams.MATCH_PARENT;
 		playerParams.height = LayoutParams.MATCH_PARENT;
 
-		ab = getActionBar();
-        ab.hide();
+        // TODO ab = getActionBar();
+        // TODO ab.hide();
 
         sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
 	}
@@ -94,14 +96,6 @@ public class VisualisationActivity extends YouTubeFailureRecoveryActivity {
             overridePendingTransition(R.anim.fadeout, R.anim.fadein);
 
 			return true;
-        case R.id.menu_share:
-            Intent i = new Intent(Intent.ACTION_SEND);
-            i.setType("text/plain");
-            i.putExtra(Intent.EXTRA_TEXT, videoUrl);
-            startActivity(Intent.createChooser(i, "Partager avec ..."));
-            overridePendingTransition(R.anim.fadeout, R.anim.fadein);
-
-            return true;
 		}
 		return super.onOptionsItemSelected(item);
 	}
@@ -130,7 +124,7 @@ public class VisualisationActivity extends YouTubeFailureRecoveryActivity {
 
 			@Override
 			public void onVideoEnded() {
-				ab.show();
+                // TODO ab.show();
 			}
 
 			@Override
@@ -140,7 +134,7 @@ public class VisualisationActivity extends YouTubeFailureRecoveryActivity {
 
 			@Override
 			public void onLoaded(String arg0) {
-				ab.hide();
+                // TODO ab.hide();
 
                 if (sharedPrefs.getBoolean("prefAutoPlay", false))
                     player1.play();
@@ -148,7 +142,7 @@ public class VisualisationActivity extends YouTubeFailureRecoveryActivity {
 
 			@Override
 			public void onError(ErrorReason arg0) {
-				ab.show();
+                // TODO ab.show();
 			}
 
 			@Override
@@ -160,7 +154,7 @@ public class VisualisationActivity extends YouTubeFailureRecoveryActivity {
 		player.setPlaybackEventListener(new YouTubePlayer.PlaybackEventListener() {
 			@Override
 			public void onStopped() {
-				ab.show();
+                // TODO ab.show();
 			}
 
 			@Override
@@ -170,12 +164,12 @@ public class VisualisationActivity extends YouTubeFailureRecoveryActivity {
 
 			@Override
 			public void onPlaying() {
-				ab.hide();
+                // TODO ab.hide();
 			}
 
 			@Override
 			public void onPaused() {
-				ab.show();
+                // TODO ab.show();
 			}
 
 			@Override

@@ -4,28 +4,47 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.ads.AdView;
+import com.google.android.gms.ads.*;
 import com.google.analytics.tracking.android.EasyTracker;
 import com.youtubeurs.lite2.service.task.AutoRefresh;
 import com.youtubeurs.lite2.util.imageutils.ImageLoader;
 
 public class SettingsActivity extends PreferenceActivity {
-	private AdView adView;
+	//private AdView adView;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.SettingsTheme);
 		super.onCreate(savedInstanceState);
 
+        // Insert actionBar
+        LinearLayout root = (LinearLayout)findViewById(android.R.id.list).getParent().getParent().getParent();
+        Toolbar bar = (Toolbar) LayoutInflater.from(this).inflate(R.layout.settings_toolbar, root, false);
+        root.addView(bar, 0); // insert at top
+        bar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         addPreferencesFromResource(R.xml.settings);
+
+        this.getListView().setDivider(new ColorDrawable(Color.TRANSPARENT));
 
         // Demande d'initialisation de l'application
         findPreference("prefReset").setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
@@ -106,7 +125,7 @@ public class SettingsActivity extends PreferenceActivity {
 		title.setText("--- ATTENTION ---");
 		title.setPadding(15, 15, 15, 15);
 		title.setGravity(Gravity.CENTER);
-		title.setTextColor(Color.BLACK);
+		title.setTextColor(getResources().getColor(R.color.material_textColorPrimary));
 		title.setTextSize(19);
 		adb.setCustomTitle(title);
 
@@ -132,7 +151,7 @@ public class SettingsActivity extends PreferenceActivity {
 		TextView messageText = (TextView) ad.findViewById(android.R.id.message);
 		messageText.setPadding(15, 15, 15, 15);
 		messageText.setGravity(Gravity.CENTER);
-		messageText.setTextColor(Color.BLACK);
+		messageText.setTextColor(getResources().getColor(R.color.material_textColorPrimary));
 		messageText.setTextSize(18);
 		ad.show();
 	}
