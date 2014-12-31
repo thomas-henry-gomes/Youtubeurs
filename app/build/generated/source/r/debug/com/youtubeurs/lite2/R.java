@@ -2024,20 +2024,21 @@ containing a value of this type.
         public static final int grey_shape=0x7f020051;
         public static final int ic_action_delete=0x7f020052;
         public static final int ic_action_refresh=0x7f020053;
-        public static final int ic_delete_white=0x7f020054;
+        public static final int ic_delete_white_36dp=0x7f020054;
         public static final int ic_launcher=0x7f020055;
         public static final int ic_plusone_medium_off_client=0x7f020056;
         public static final int ic_plusone_small_off_client=0x7f020057;
         public static final int ic_plusone_standard_off_client=0x7f020058;
         public static final int ic_plusone_tall_off_client=0x7f020059;
-        public static final int ic_settings_white=0x7f02005a;
-        public static final int ic_share_white=0x7f02005b;
-        public static final int ic_sync_white=0x7f02005c;
-        public static final int play_alt=0x7f02005d;
-        public static final int powered_by_google_dark=0x7f02005e;
-        public static final int powered_by_google_light=0x7f02005f;
-        public static final int red_shape=0x7f020060;
-        public static final int scrollbar=0x7f020061;
+        public static final int ic_search_white_36dp=0x7f02005a;
+        public static final int ic_settings_white_36dp=0x7f02005b;
+        public static final int ic_share_white_36dp=0x7f02005c;
+        public static final int ic_sync_white_36dp=0x7f02005d;
+        public static final int play_alt=0x7f02005e;
+        public static final int powered_by_google_dark=0x7f02005f;
+        public static final int powered_by_google_light=0x7f020060;
+        public static final int red_shape=0x7f020061;
+        public static final int scrollbar=0x7f020062;
     }
     public static final class id {
         public static final int FrameLayout=0x7f0b005d;
@@ -2096,8 +2097,9 @@ containing a value of this type.
         public static final int menu_add=0x7f0b006f;
         public static final int menu_delete=0x7f0b006c;
         public static final int menu_facebook=0x7f0b0070;
-        public static final int menu_param=0x7f0b0071;
+        public static final int menu_param=0x7f0b0072;
         public static final int menu_refresh=0x7f0b006e;
+        public static final int menu_search=0x7f0b0071;
         public static final int menu_share=0x7f0b006d;
         public static final int middle=0x7f0b0018;
         public static final int monochrome=0x7f0b003a;

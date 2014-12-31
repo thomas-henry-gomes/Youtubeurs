@@ -3,7 +3,7 @@
     <item
         android:id="@+id/menu_add"
         app:showAsAction="never"
-        android:title="Ajouter un YouTubeur"/>
+        android:title="Ajouter un Youtubeur"/>
     <item
         android:id="@+id/menu_share"
         app:showAsAction="never"
@@ -13,8 +13,13 @@
         app:showAsAction="never"
         android:title="Facebook"/>
     <item
+        android:id="@+id/menu_search"
+        android:icon="@drawable/ic_search_white_36dp"
+        app:showAsAction="always"
+        android:title="Rechercher un Youtubeur"/>
+    <item
         android:id="@+id/menu_param"
-        android:icon="@drawable/ic_settings_white"
+        android:icon="@drawable/ic_settings_white_36dp"
         app:showAsAction="ifRoom"
         android:title="Paramètres"/>
 </menu>

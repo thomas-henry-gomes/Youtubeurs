@@ -1,5 +1,6 @@
 package com.youtubeurs.lite2;
 
+import java.io.IOException;
 import java.util.Calendar;
 import java.util.List;
 
@@ -9,6 +10,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Gravity;
@@ -23,7 +25,15 @@ import android.widget.Toast;
 import com.google.android.gms.ads.*;
 import com.google.analytics.tracking.android.EasyTracker;
 import com.youtubeurs.lite2.domain.User;
+import com.youtubeurs.lite2.service.task.GetSearchYouTubeUsersTask;
 import com.youtubeurs.lite2.ui.widget.UsersListView;
+import com.youtubeurs.lite2.util.StreamUtils;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpUriRequest;
+import org.apache.http.impl.client.DefaultHttpClient;
 
 public class MainActivity extends ActionBarActivity {
 	private AdView adView;
@@ -142,14 +152,14 @@ public class MainActivity extends ActionBarActivity {
             AlertDialog.Builder adb = new AlertDialog.Builder(this);
 
             TextView title = new TextView(this);
-            title.setText("Ajouter un YouTubeur");
+            title.setText("Ajouter un Youtubeur");
             title.setPadding(15, 15, 15, 15);
             title.setGravity(Gravity.CENTER);
             title.setTextColor(getResources().getColor(R.color.material_textColorPrimary));
             title.setTextSize(19);
             adb.setCustomTitle(title);
 
-            adb.setMessage("Saisissez ci-dessous un YouTubeur valide (utilisez son user YouTube : http://www.youtube.com/user/xxx/ où xxx est le user à utiliser) :");
+            adb.setMessage("Saisissez ci-dessous un Youtubeur valide (utilisez son user YouTube : http://www.youtube.com/user/xxx/ où xxx est le user à utiliser) - (si vous ne connaissez pas le user, il est plutôt conseillé d'utiliser la recherche d'un Youtubeur) :");
             final EditText input = new EditText(this);
             input.setTextColor(getResources().getColor(R.color.material_textColorPrimary));
             adb.setView(input);
@@ -194,6 +204,40 @@ public class MainActivity extends ActionBarActivity {
             Intent j = new Intent(MainActivity.this, SettingsActivity.class);
             startActivity(j);
             overridePendingTransition(R.anim.fadeout, R.anim.fadein);
+
+            return true;
+        case R.id.menu_search:
+            AlertDialog.Builder adb2 = new AlertDialog.Builder(this);
+
+            TextView title2 = new TextView(this);
+            title2.setText("Rechercher un Youtubeur");
+            title2.setPadding(15, 15, 15, 15);
+            title2.setGravity(Gravity.CENTER);
+            title2.setTextColor(getResources().getColor(R.color.material_textColorPrimary));
+            title2.setTextSize(19);
+            adb2.setCustomTitle(title2);
+
+            adb2.setMessage("Saisissez ci-dessous le nom d'un Youtubeur (il sera utilisé pour la recherche et une liste vous sera proposée) :");
+            final EditText input2 = new EditText(this);
+            input2.setTextColor(getResources().getColor(R.color.material_textColorPrimary));
+            adb2.setView(input2);
+            adb2.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                    AsyncTask response = new GetSearchYouTubeUsersTask(getApplicationContext()).execute("https://www.youtube.com/results?filters=channel&lclk=channel&search_query=" + input2.getText());
+                }
+            });
+            adb2.setNegativeButton("Fermer", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                }
+            });
+
+            AlertDialog ad2 = adb2.show();
+            TextView messageText2 = (TextView) ad2.findViewById(android.R.id.message);
+            messageText2.setPadding(15, 15, 15, 15);
+            messageText2.setGravity(Gravity.CENTER);
+            messageText2.setTextColor(getResources().getColor(R.color.material_textColorPrimary));
+            messageText2.setTextSize(18);
+            ad2.show();
 
             return true;
 		}
