@@ -213,8 +213,6 @@ public class VideosActivity extends ActionBarActivity implements OnRefreshListen
 		v = (String) msg.getData().get("ERROR");
 
 		if ("true".equals(v)) {
-            menu.getItem(1).getActionView().clearAnimation();
-            menu.getItem(1).setActionView(null);
             mPullToRefreshLayout.setRefreshComplete();
 
 			Tools.showToast(getApplicationContext(), "Erreur lors de la récupération, vérifier votre connexion internet !!!", Toast.LENGTH_LONG);
@@ -311,11 +309,6 @@ public class VideosActivity extends ActionBarActivity implements OnRefreshListen
 		listView.setVideosFirst(database.getVideos(videoAuthor), getApplicationContext());
 
 		database.closeDatabase();
-
-        if ((menu.getItem(1).getActionView()) != null) {
-            menu.getItem(1).getActionView().clearAnimation();
-            menu.getItem(1).setActionView(null);
-        }
 
         // Notify PullToRefreshLayout that the refresh has finished
         mPullToRefreshLayout.setRefreshComplete();
@@ -474,17 +467,6 @@ public class VideosActivity extends ActionBarActivity implements OnRefreshListen
 
 		// Si besoin de rafraichir les videos
 		if (videosToRefresh) {
-			RotateAnimation anim = new RotateAnimation (0, 360, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
-            anim.setInterpolator (new LinearInterpolator());
-            anim.setDuration (1000);
-            anim.setRepeatCount (Animation.INFINITE);
-            View v = new ImageView(getApplicationContext());
-            v.setBackgroundResource(R.drawable.ic_action_refresh);
-            v.setScaleX(0.5f);
-            v.setScaleY(0.5f);
-            v.startAnimation(anim);
-            menu.getItem(1).setActionView(v);
-
 			Tools.showToast(getApplicationContext(), "Récuperation des vidéos en cours ...", Toast.LENGTH_LONG);
 
 			// We start a new task that does its work on its own thread
@@ -506,18 +488,7 @@ public class VideosActivity extends ActionBarActivity implements OnRefreshListen
 
             return true;
 		case R.id.menu_refresh:
-            RotateAnimation anim = new RotateAnimation (0, 360, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
-            anim.setInterpolator (new LinearInterpolator());
-            anim.setDuration (1000);
-            anim.setRepeatCount (Animation.INFINITE);
-            View v = new ImageView(getApplicationContext());
-            v.setBackgroundResource(R.drawable.ic_action_refresh);
-            v.setScaleX(0.5f);
-            v.setScaleY(0.5f);
-            v.startAnimation(anim);
-            item.setActionView(v);
-
-			Tools.showToast(getApplicationContext(), "Actualisation en cours ...", Toast.LENGTH_LONG);
+            Tools.showToast(getApplicationContext(), "Actualisation en cours ...", Toast.LENGTH_LONG);
 
 			// We start a new task that does its work on its own thread
 			// We pass in a handler that will be called when the task has finished
@@ -615,6 +586,5 @@ public class VideosActivity extends ActionBarActivity implements OnRefreshListen
         // because who cares if we get a callback once the activity has stopped? not me!
         responseHandler = null;
     }
-
 
 }

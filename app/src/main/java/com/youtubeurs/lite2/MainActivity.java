@@ -6,6 +6,7 @@ import java.util.List;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
@@ -217,13 +218,14 @@ public class MainActivity extends ActionBarActivity {
             title2.setTextSize(19);
             adb2.setCustomTitle(title2);
 
-            adb2.setMessage("Saisissez ci-dessous le nom d'un Youtubeur (il sera utilisé pour la recherche et une liste vous sera proposée) :");
+            adb2.setMessage("Saisissez ci-dessous le nom d'un Youtubeur (il sera utilisé pour la recherche et une liste vous sera proposée. Vous pourrez alors choisir celui à ajouter.) :");
             final EditText input2 = new EditText(this);
             input2.setTextColor(getResources().getColor(R.color.material_textColorPrimary));
             adb2.setView(input2);
+
             adb2.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) {
-                    AsyncTask response = new GetSearchYouTubeUsersTask(getApplicationContext()).execute("https://www.youtube.com/results?filters=channel&lclk=channel&search_query=" + input2.getText());
+                    new GetSearchYouTubeUsersTask(MainActivity.this).execute("https://www.youtube.com/results?filters=channel&lclk=channel&search_query=" + input2.getText());
                 }
             });
             adb2.setNegativeButton("Fermer", new DialogInterface.OnClickListener() {
