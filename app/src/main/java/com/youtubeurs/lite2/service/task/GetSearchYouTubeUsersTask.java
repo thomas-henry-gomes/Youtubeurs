@@ -4,20 +4,15 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.DataSetObserver;
 import android.os.AsyncTask;
 import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.youtubeurs.lite2.MainActivity;
 import com.youtubeurs.lite2.R;
 import com.youtubeurs.lite2.VideosActivity;
 import com.youtubeurs.lite2.util.StreamUtils;
@@ -50,6 +45,8 @@ public class GetSearchYouTubeUsersTask extends AsyncTask<String, Void, String> {
         try {
             this.mException = null;
 
+            url[0] = url[0].replaceAll(" ", "+");
+
             // Get a httpclient to talk to the internet
             HttpClient client = new DefaultHttpClient();
             // Perform a GET request
@@ -59,6 +56,9 @@ public class GetSearchYouTubeUsersTask extends AsyncTask<String, Void, String> {
             // Convert this response into a readable string
             return StreamUtils.convertToString(response.getEntity().getContent());
         } catch (IOException e) {
+            this.mException = e;
+            return "";
+        } catch (Exception e) {
             this.mException = e;
             return "";
         }
@@ -130,12 +130,15 @@ public class GetSearchYouTubeUsersTask extends AsyncTask<String, Void, String> {
             }
 
             ad2.show();
+
             TextView messageText2 = (TextView) ad2.findViewById(android.R.id.message);
-            messageText2.setPadding(15, 15, 15, 15);
-            messageText2.setGravity(Gravity.CENTER);
-            messageText2.setTextColor(mContext.getResources().getColor(R.color.material_textColorPrimary));
-            messageText2.setTextSize(18);
-            ad2.show();
+            if (messageText2 != null) {
+                messageText2.setPadding(15, 15, 15, 15);
+                messageText2.setGravity(Gravity.CENTER);
+                messageText2.setTextColor(mContext.getResources().getColor(R.color.material_textColorPrimary));
+                messageText2.setTextSize(18);
+            }
+
         }
     }
 
